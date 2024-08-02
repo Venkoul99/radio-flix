@@ -22,6 +22,8 @@ SoftUni React project
   - [ ] New card (Title, Text, Published on, count comments and count likes if i have time)
   - [ ] More details (Author, Title, Text, published on, comments, count likes)
 
+## 3. Create
+
 
 
 

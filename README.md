@@ -11,7 +11,7 @@ SoftUni React project
 
 ## 2. Create components
 - [ ] Home
-  - [ ] Header
+  - [x] Header
   - [ ] Radio Player
   - [ ] Last News
 - [ ] Login

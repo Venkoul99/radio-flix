@@ -15,7 +15,7 @@ SoftUni React project
   - [ ] Radio Player
   - [ ] Last News
 - [x] Login
-- [ ] Register
+- [x] Register
 - [ ] Contacts
 - [ ] About us
 - [ ] News

@@ -20,7 +20,7 @@ export default function Login() {
       </Title>
       <Text c="dimmed" size="sm" ta="center" mt={5}>
         Do not have an account yet?{' '}
-        <Anchor size="sm" component="button">
+        <Anchor size="sm" href="/register">
           Create account
         </Anchor>
       </Text>

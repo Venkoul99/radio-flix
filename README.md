@@ -1,4 +1,4 @@
-# games-play
+# radio-flix
 
 SoftUni React project
 
@@ -22,7 +22,22 @@ SoftUni React project
   - [ ] New card (Title, Text, Published on, count comments and count likes if i have time)
   - [ ] More details (Author, Title, Text, published on, comments, count likes)
 
-## 3. Create
+## 5. Create pages and fix the Header with my pages:
+- [x] Radio flix (In left)
+- [x] Home
+- [ ] News
+- [ ] Contact us
+- [ ] About us
+
+## 6. Create Links to buttons
+- [ ] Home
+- [ ] Header
+- [x] Login
+- [x] Register
+- [ ] Contact us
+- [ ] About us
+- [ ] News
+  
 
 
 

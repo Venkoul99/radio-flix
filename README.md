@@ -16,11 +16,12 @@ SoftUni React project
   - [ ] Last News
 - [x] Login
 - [x] Register
-- [ ] Contacts
+- [x] Contacts
 - [ ] About us
 - [ ] News
   - [ ] New card (Title, Text, Published on, count comments and count likes if i have time)
   - [ ] More details (Author, Title, Text, published on, comments, count likes)
+- [ ] Footer
 
 ## 5. Create pages and fix the Header with my pages:
 - [x] Radio flix (In left)

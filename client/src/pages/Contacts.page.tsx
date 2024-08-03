@@ -1,12 +1,12 @@
 import Header from '@/components/Header/Header';
-import Register from '../components/Register/Register';
+import Contacts from '../components/Contacts/Contacts';
 import { Footer } from '@/components/Footer/Footer';
 
-export function RegisterPage() {
+export function ContactsPage() {
   return (
     <>
       <Header />
-      <Register />
+      <Contacts />
       <Footer />
     </>
   );

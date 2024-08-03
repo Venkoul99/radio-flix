@@ -1,12 +1,12 @@
 import Header from '@/components/Header/Header';
-import Register from '../components/Register/Register';
 import { Footer } from '@/components/Footer/Footer';
+import AboutUs from '@/components/AboutUs/AboutYs';
 
-export function RegisterPage() {
+export function AboutUsPage() {
   return (
     <>
       <Header />
-      <Register />
+      <AboutUs />
       <Footer />
     </>
   );

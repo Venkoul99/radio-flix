@@ -1,14 +1,14 @@
-import { Welcome } from '../components/Welcome/Welcome';
-import { ColorSchemeToggle } from '../components/ColorSchemeToggle/ColorSchemeToggle';
+import LatestNews from '@/components/Home/LatestNews';
 import Header from '../components/Header/Header';
 import { Footer } from '@/components/Footer/Footer';
+import Welcome from '@/components/Home/Welcome';
 
 export function HomePage() {
   return (
     <>
       <Header />
       <Welcome />
-      <ColorSchemeToggle />
+      <LatestNews />
       <Footer />
     </>
   );

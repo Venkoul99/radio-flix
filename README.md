@@ -10,34 +10,33 @@ SoftUni React project
 - [x] Learn how mantine works and good practices
 
 ## 2. Create components
-- [ ] Home
+- [x] Home
   - [x] Header
   - [ ] Radio Player
-  - [ ] Last News
+  - [x] Last News
 - [x] Login
 - [x] Register
 - [x] Contacts
-- [ ] About us
+- [x] About us
 - [ ] News
   - [ ] New card (Title, Text, Published on, count comments and count likes if i have time)
   - [ ] More details (Author, Title, Text, published on, comments, count likes)
-- [ ] Footer
+- [x] Footer
 
 ## 5. Create pages and fix the Header with my pages:
 - [x] Radio flix (In left)
 - [x] Home
-- [ ] News
-- [ ] Contact us
-- [ ] About us
+- [x] News
+- [x] Contact us
+- [x] About us
 
 ## 6. Create Links to buttons
-- [ ] Home
-- [ ] Header
+- [x] Home
 - [x] Login
 - [x] Register
-- [ ] Contact us
-- [ ] About us
-- [ ] News
+- [x] Contact us
+- [x] About us
+- [x] News
   
 
 

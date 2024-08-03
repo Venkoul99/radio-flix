@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 import { Card, Image, Text, Badge, Button, Group } from '@mantine/core';
 
 export default function NewsItem() {
@@ -21,7 +23,14 @@ export default function NewsItem() {
         activities on and around the fjords of Norway
       </Text>
 
-      <Button color="blue" fullWidth mt="md" radius="md">
+      <Button
+        color="blue"
+        fullWidth
+        mt="md"
+        radius="md"
+        component={Link}
+        to={'/news/newsitemdetails'}
+      >
         Book classic tour now
       </Button>
     </Card>

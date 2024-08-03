@@ -105,8 +105,12 @@ export default function Header() {
           <Divider my="sm" />
 
           <Group justify="center" grow pb="xl" px="md">
-            <Button variant="default">Log in</Button>
-            <Button>Sign up</Button>
+            <Button variant="default" component={Link} to={'/login'}>
+              Log in
+            </Button>
+            <Button component={Link} to={'/register'}>
+              Sign up
+            </Button>
           </Group>
         </ScrollArea>
       </Drawer>

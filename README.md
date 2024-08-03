@@ -12,15 +12,15 @@ SoftUni React project
 ## 2. Create components
 - [x] Home
   - [x] Header
-  - [ ] Radio Player
+  - [ ] Radio Player (If I have time)
   - [x] Last News
 - [x] Login
 - [x] Register
 - [x] Contacts
 - [x] About us
-- [ ] News
-  - [ ] New card (Title, Text, Published on, count comments and count likes if i have time)
-  - [ ] More details (Author, Title, Text, published on, comments, count likes)
+- [x] News
+  - [x] NewsItem (Title, Text, Published on - currently On Sale)
+  - [x] More details (Author, Title, Text, published on, comments)
 - [x] Footer
 
 ## 5. Create pages and fix the Header with my pages:

@@ -5,6 +5,7 @@ import { RegisterPage } from './pages/Register.page';
 import { ContactsPage } from './pages/Contacts.page';
 import { AboutUsPage } from './pages/AboutUs.page';
 import { NewsPage } from './pages/News.page';
+import { NewsItemDetailsPage } from './pages/news/NewsItemDetails';
 
 const router = createBrowserRouter([
   {
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
   {
     path: '/news',
     element: <NewsPage />,
+  },
+  {
+    path: '/news/newsitemdetails',
+    element: <NewsItemDetailsPage />,
   },
 ]);
 

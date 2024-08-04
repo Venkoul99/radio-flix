@@ -16,7 +16,13 @@ export default function NewsItem({ news }: NewsItemProps) {
   return (
     <Card shadow="sm" padding="lg" radius="md" withBorder>
       <Card.Section>
-        <Image src={news.imageUrl} height={160} alt={news.title} />
+        <Image
+          src={news.imageUrl}
+          height={350}
+          alt={news.title}
+          fit="cover"
+          style={{ objectPosition: 'top' }}
+        />
       </Card.Section>
 
       <Group justify="space-between" mt="md" mb="xs">

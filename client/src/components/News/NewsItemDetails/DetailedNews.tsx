@@ -26,12 +26,10 @@ export default function DetailedNews() {
         />
       </Card.Section>
 
-      {news.highlighted ? (
-        <Group mt="md" mb="xs">
-          <Text>{news.text}</Text>
-          <Badge color="pink">HIGHLIGHTED</Badge>
-        </Group>
-      ) : null}
+      <Group mt="md" mb="xs">
+        <Text>{news.text}</Text>
+        {news.highlighted ? <Badge color="pink">HIGHLIGHTED</Badge> : null}
+      </Group>
 
       <Divider my="md" />
 

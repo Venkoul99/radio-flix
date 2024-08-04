@@ -47,6 +47,10 @@ SoftUni React project
 - [ ] Form Hook
 - [x] News Hooks
 - [ ] Comments Hooks
+  
+## 7. Pages functions
+- [x] News page - get all news
+- [x] Details News page - get one new
 
 
 

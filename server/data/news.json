@@ -1,44 +1,62 @@
 {
     "39563813-afea-4dbc-9234-0b00352d7dea": {
         "title": "Avicii's Last Performance: A Heartfelt Farewell",
-        "Highlighted": 1,
+        "highlighted": 1,
         "text": "Avicii's final performance was a poignant and emotional event that resonated deeply with fans around the globe. This set was not just a musical journey but a tribute to the artist's legacy. The energy of the crowd, combined with Avicii's heartfelt delivery, created a unique atmosphere of celebration and remembrance. The performance featured a mix of his greatest hits and unreleased tracks, offering fans a bittersweet opportunity to experience the brilliance of Avicii one last time. It remains a touching reminder of his profound impact on the music world.",
         "imageUrl": "/public/images/avicii.jpg",
-        "_id": "39563813-afea-4dbc-9234-0b00352d7dea"
+        "_id": "39563813-afea-4dbc-9234-0b00352d7dea",
+        "writtenBy": "John Doe",
+        "publishedOn": "2023-08-01",
+        "username": "johndoe123"
     },
     "fe8c35d5-b69e-489c-918b-7daaa2b68e62": {
         "title": "Tiesto's Phenomenal Set at Tomorrowland",
-        "Highlighted": 1,
-        "text": "Tiesto's performance at Tomorrowland was nothing short of  extraordinary. His set was a masterclass in electronic dance music, showcasing   an incredible blend of high-energy beats and emotive melodies. The crowd was  electrified from start to finish, with Tiesto seamlessly transitioning between   iconic tracks and new releases. This set is often hailed as one of the most   memorable moments in the festival's history, capturing the essence of Tiesto's    ability to connect with his audience on a profound level.",
+        "highlighted": 1,
+        "text": "Tiesto's performance at Tomorrowland was nothing short of extraordinary. His set was a masterclass in electronic dance music, showcasing an incredible blend of high-energy beats and emotive melodies. The crowd was electrified from start to finish, with Tiesto seamlessly transitioning between iconic tracks and new releases. This set is often hailed as one of the most memorable moments in the festival's history, capturing the essence of Tiesto's ability to connect with his audience on a profound level.",
         "imageUrl": "/public/images/tiesto.jpg",
-        "_id": "fe8c35d5-b69e-489c-918b-7daaa2b68e62"
+        "_id": "fe8c35d5-b69e-489c-918b-7daaa2b68e62",
+        "writtenBy": "Jane Smith",
+        "publishedOn": "2023-07-15",
+        "username": "janesmith456"
     },
     "a61c1d15-824d-48f3-a171-2950e1a196b8": {
         "title": "Armin van Buuren's Live Set at Ultra Music Festival",
-        "Highlighted": 0,
-        "text": "Armin van Buuren's live set at the Ultra Music Festival was a showcase     of his signature style and expertise in the trance genre. The performance was   marked by a dynamic selection of tracks that ranged from uplifting anthems to     deep, resonant beats. Throughout the set, Armin maintained an impeccable flow,  keeping the energy high and the audience fully engaged. His ability to read the  crowd and deliver exactly what they needed at every moment was a testament to    his experience and skill as a DJ. The visuals and pyrotechnics added another   layer of excitement, making this performance one of the standout moments of the   festival.",
+        "highlighted": 0,
+        "text": "Armin van Buuren's live set at the Ultra Music Festival was a showcase of his signature style and expertise in the trance genre. The performance was marked by a dynamic selection of tracks that ranged from uplifting anthems to deep, resonant beats. Throughout the set, Armin maintained an impeccable flow, keeping the energy high and the audience fully engaged. His ability to read the crowd and deliver exactly what they needed at every moment was a testament to his experience and skill as a DJ. The visuals and pyrotechnics added another layer of excitement, making this performance one of the standout moments of the festival.",
         "imageUrl": "public/images/armin.jpg",
-        "_id": "a61c1d15-824d-48f3-a171-2950e1a196b8"
+        "_id": "a61c1d15-824d-48f3-a171-2950e1a196b8",
+        "writtenBy": "Alice Johnson",
+        "publishedOn": "2023-06-30",
+        "username": "alicejohnson789"
     },
     "d2b0e0ae-83f1-4a3f-8107-0cbfbfa6e5b0": {
         "title": "Calvin Harris' Electrifying Performance at Coachella",
-        "Highlighted": 1,
+        "highlighted": 1,
         "text": "Calvin Harris' performance at Coachella was a high-energy spectacle that captivated the audience. With a blend of his most popular hits and new tracks, Harris created an unforgettable experience. The set featured stunning visuals and special effects that enhanced the overall atmosphere. Fans danced the night away to the pulsating beats and infectious rhythms, making this performance one of the highlights of the festival.",
         "imageUrl": "images/calvin-harris.jpg",
-        "_id": "d2b0e0ae-83f1-4a3f-8107-0cbfbfa6e5b0"
+        "_id": "d2b0e0ae-83f1-4a3f-8107-0cbfbfa6e5b0",
+        "writtenBy": "Bob Brown",
+        "publishedOn": "2023-07-20",
+        "username": "bobbrown321"
     },
     "f6b8a1d2-1c71-4b1a-bc4b-fb3a93c8c056": {
         "title": "David Guetta's Iconic Set at Ibiza",
-        "Highlighted": 0,
+        "highlighted": 0,
         "text": "David Guetta's set at Ibiza was a memorable night of dance music and excitement. His setlist included a mix of classic anthems and fresh tracks, showcasing his talent for engaging the crowd. The beachside venue added a magical touch to the performance, with stunning views and a vibrant atmosphere. Guetta's charisma and energy kept the audience dancing until the early hours of the morning.",
         "imageUrl": "images/david-guetta.jpg",
-        "_id": "f6b8a1d2-1c71-4b1a-bc4b-fb3a93c8c056"
+        "_id": "f6b8a1d2-1c71-4b1a-bc4b-fb3a93c8c056",
+        "writtenBy": "Charlie Davis",
+        "publishedOn": "2023-05-10",
+        "username": "charliedavis654"
     },
     "a3e6c8d7-929d-4a7e-9302-7d72c9264d1a": {
         "title": "Zedd's Spectacular Performance at EDC",
-        "Highlighted": 1,
+        "highlighted": 1,
         "text": "Zedd's performance at the Electric Daisy Carnival (EDC) was a breathtaking display of electronic music and visual artistry. With a carefully curated setlist and state-of-the-art stage effects, Zedd created an immersive experience that left the crowd in awe. The combination of energetic beats, colorful visuals, and interactive elements made this performance one of the standout moments of the festival.",
         "imageUrl": "images/zedd.jpg",
-        "_id": "a3e6c8d7-929d-4a7e-9302-7d72c9264d1a"
+        "_id": "a3e6c8d7-929d-4a7e-9302-7d72c9264d1a",
+        "writtenBy": "Dana Evans",
+        "publishedOn": "2023-08-05",
+        "username": "danaevans987"
     }
 }

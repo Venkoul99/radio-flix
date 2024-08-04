@@ -4,4 +4,7 @@ export interface NewsItem {
   text: string;
   imageUrl: string;
   highlighted: boolean;
+  writtenBy: string;
+  publishedOn: string;
+  username: string;
 }

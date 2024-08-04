@@ -18,3 +18,20 @@ export function useGetAllNews(): [NewsItem[], React.Dispatch<React.SetStateActio
 
   return [news, setNews];
 }
+
+export function useGetOneNews(newsId: string) {
+  const [news, setNews] = useState<NewsItem | null>(null);;
+
+  useEffect(() => {
+    (async () => {
+      try {
+        const result = await newsApi.getOne(newsId);
+        setNews(result);
+      } catch (error) {
+        console.error('Failed to fetch news:', error);
+      }
+    })();
+  }, [newsId]);
+
+  return [news, setNews] as const;
+}

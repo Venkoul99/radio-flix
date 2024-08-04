@@ -34,7 +34,7 @@ export default function NewsItem({ news }: NewsItemProps) {
         mt="md"
         radius="md"
         component={Link}
-        to={'/news/newsitemdetails'}
+        to={`/news/${news._id}/details`}
       >
         Book classic tour now
       </Button>

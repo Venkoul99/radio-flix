@@ -38,22 +38,18 @@ SoftUni React project
 - [x] About us
 - [x] News
   
+## 7. Create Service layer
+- [x] Service layer architecture (name: api seems legit)
+- [x] Abstract requester
+- [x] Add News API
+  
+## 6. API Hooks
+- [ ] Form Hook
+- [x] News Hooks
+- [ ] Comments Hooks
 
 
 
-
-## 2. React Router
-
-- [ ] Install react-router-dom
-- [ ] Setup react-router-dom
-- [ ] Add routes in App.jsx
-- [ ] Add links in the navigation
-
-## 3. Create Service layer
-- [ ] Service layer architecture
-- [ ] Abstract requester
-- [ ] Add Game API
-- [ ] Pressed practice server
 
 ## 4. Page Implementations
 - [ ] Game List

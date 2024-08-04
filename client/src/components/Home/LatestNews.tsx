@@ -7,11 +7,7 @@ export default function LatestNews() {
       <Text size="xl" fw={700} mb="md">
         HIGHLIGHTS
       </Text>
-      <SimpleGrid cols={3} spacing="lg">
-        <NewsItem />
-        <NewsItem />
-        <NewsItem />
-      </SimpleGrid>
+      <SimpleGrid cols={3} spacing="lg"></SimpleGrid>
     </>
   );
 }

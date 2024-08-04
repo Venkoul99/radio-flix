@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
-
 import { Card, Image, Text, Badge, Button, Group } from '@mantine/core';
+import { TruncateText } from '@/tools/TruncateText';
 
 interface NewsItemProps {
   news: {
@@ -27,11 +27,11 @@ export default function NewsItem({ news }: NewsItemProps) {
 
       <Group justify="space-between" mt="md" mb="xs">
         <Text fw={500}>{news.title}</Text>
-        <Badge color="pink">On Sale</Badge>
+        {news.highlighted ? <Badge color="pink">highlighted</Badge> : null}
       </Group>
 
       <Text size="sm" c="dimmed">
-        {news.text}
+        {TruncateText(news.text)}
       </Text>
 
       <Button
@@ -42,7 +42,7 @@ export default function NewsItem({ news }: NewsItemProps) {
         component={Link}
         to={`/news/${news._id}/details`}
       >
-        Book classic tour now
+        Show More Details
       </Button>
     </Card>
   );

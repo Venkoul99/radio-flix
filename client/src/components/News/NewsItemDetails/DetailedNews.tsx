@@ -16,10 +16,13 @@ export default function DetailedNews() {
       <Card.Section>
         <Image
           src={news.imageUrl}
-          height={350}
           alt={news.title}
-          fit="cover"
-          style={{ objectPosition: 'top' }}
+          style={{
+            width: '50%',
+            height: 'auto',
+            objectFit: 'cover',
+            objectPosition: 'top',
+          }}
         />
       </Card.Section>
 

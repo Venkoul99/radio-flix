@@ -1,11 +1,11 @@
-import CommentSection from './Comments';
+import CommentsSection from '../Comments/CommentsSection';
 import DetailedNews from './DetailedNews';
 
 export default function NewsItemDetails() {
   return (
     <>
       <DetailedNews />
-      <CommentSection />
+      <CommentsSection />
     </>
   );
 }

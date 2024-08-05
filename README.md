@@ -54,7 +54,7 @@ SoftUni React project
 - [x] Home - Get last 3 news
 
 ## 8. Comments
-- [ ] Create service for nested resource `comments`
+- [x] Create service for nested resource `comments`
 - [ ] Post comment to server
 - [ ] Read comments from server
 - [ ] Update comments in the component

@@ -51,6 +51,7 @@ SoftUni React project
 ## 7. Pages functions
 - [x] News page - get all news
 - [x] Details News page - get one new
+- [ ] Home - Get last 3 news
 
 
 

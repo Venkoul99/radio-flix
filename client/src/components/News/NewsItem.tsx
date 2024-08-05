@@ -27,7 +27,11 @@ export default function NewsItem({ news }: NewsItemProps) {
 
       <Group justify="space-between" mt="md" mb="xs">
         <Text fw={500}>{news.title}</Text>
-        {news.highlighted ? <Badge color="pink">highlighted</Badge> : null}
+        {news.highlighted ? (
+          <Badge color="pink">highlighted</Badge>
+        ) : (
+          <Badge style={{ visibility: 'hidden' }}>hidden</Badge>
+        )}
       </Group>
 
       <Text size="sm" c="dimmed">

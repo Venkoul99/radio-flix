@@ -51,29 +51,16 @@ SoftUni React project
 ## 7. Pages functions
 - [x] News page - get all news
 - [x] Details News page - get one new
-- [ ] Home - Get last 3 news
+- [x] Home - Get last 3 news
 
-
-
-
-## 4. Page Implementations
-- [ ] Game List
-- [ ] Details
-  - [ ] Details Link
-  - [ ] Details route 
-  - [ ] Api function - getOne (to get one game)
-- [ ] Home - Latest Games
-## 5. Comments
+## 8. Comments
 - [ ] Create service for nested resource `comments`
 - [ ] Post comment to server
 - [ ] Read comments from server
 - [ ] Update comments in the component
 - [ ] Clear form
-## 6. API Hooks
-- [ ] Form Hook
-- [ ] GameApi Hooks
-- [ ] Comments Hooks
-## 7. Authentication
+
+## 9. Authentication
 - [ ] Auth API
   - [ ] Login
   - [ ] Register
@@ -89,9 +76,3 @@ SoftUni React project
   - [ ] Add form validation 
 - [ ] Logout
 - [ ] Authorized Requests
-## 8. UI Implementation
-- [ ] Dynamic navigation
-- [ ] Create game
-  - [ ] Api function
-  - [ ] Hook
-- [ ] Latest games

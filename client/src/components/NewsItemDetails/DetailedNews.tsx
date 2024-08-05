@@ -6,7 +6,7 @@ import { useParams } from 'react-router-dom';
 export default function DetailedNews() {
   const { newsId } = useParams<{ newsId: string }>();
   const [news] = useGetOneNews(newsId || '');
-  console.log(news);
+
   if (!news) {
     return <div>Loading...</div>;
   }

@@ -56,9 +56,9 @@ SoftUni React project
 ## 8. Comments
 - [x] Create service for nested resource `comments`
 - [x] Post comment to server
-- [ ] Read comments from server
-- [ ] Update comments in the component
-- [ ] Clear form
+- [x] Read comments from server
+- [x] Update comments in the component
+- [x] Clear form
 
 ## 9. Authentication
 - [ ] Auth API

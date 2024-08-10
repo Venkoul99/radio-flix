@@ -1,13 +1,18 @@
+import { NewsComment } from '@/types/NewsComment';
 import { Box, Stack, Avatar, Text } from '@mantine/core';
 
-export default function Comment() {
+interface SingleCommentProps {
+  comment: NewsComment;
+}
+
+export default function Comment({ comment }: SingleCommentProps) {
   return (
     <Box>
       <Stack gap="xs">
         <Avatar size={24} src="https://randomuser.me/api/portraits/women/2.jpg" />
-        <Text size="sm">Jane Smith</Text>
+        <Text size="sm">{comment.username}</Text>
         <Text size="sm" color="dimmed">
-          Amazing adventure! The fjords are breathtaking.
+          {comment.text}
         </Text>
       </Stack>
     </Box>

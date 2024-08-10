@@ -1,3 +1,5 @@
+import { NewsComment } from "./NewsComment";
+
 export interface NewsItem {
   _id: string;
   title: string;
@@ -7,4 +9,5 @@ export interface NewsItem {
   writtenBy: string;
   publishedOn: string;
   username: string;
+  comments: NewsComment[];
 }

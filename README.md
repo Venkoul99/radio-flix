@@ -44,7 +44,7 @@ SoftUni React project
 - [x] Add News API
   
 ## 6. API Hooks
-- [ ] Form Hook
+- [x] Form Hook
 - [x] News Hooks
 - [ ] Comments Hooks
   
@@ -76,3 +76,8 @@ SoftUni React project
   - [ ] Add form validation 
 - [ ] Logout
 - [ ] Authorized Requests
+## 10. UI Inplementation
+- [ ] Dynamic Navigation
+- [ ] Create game
+  - [ ] API function
+  - [ ] Hook 

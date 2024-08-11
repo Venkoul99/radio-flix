@@ -30,11 +30,15 @@ import {
 } from '@tabler/icons-react';
 import classes from './Header.module.css';
 import { Link } from 'react-router-dom';
+import { useContext } from 'react';
+import { AuthContext } from '@/contexts/AuthContext';
 
 export default function Header() {
   const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] = useDisclosure(false);
   const [linksOpened, { toggle: toggleLinks }] = useDisclosure(false);
   const theme = useMantineTheme();
+
+  const { isAuthenticated } = useContext(AuthContext);
 
   return (
     <Box pb={60}>
@@ -60,15 +64,25 @@ export default function Header() {
               About us
             </a>
           </Group>
-
-          <Group visibleFrom="sm">
-            <Button variant="default" component={Link} to={'/login'}>
-              Log in
-            </Button>
-            <Button component={Link} to={'/register'}>
-              Sign up
-            </Button>
-          </Group>
+          {isAuthenticated ? (
+            <Group visibleFrom="sm">
+              <Button variant="default" component={Link} to={'/login'}>
+                Create New
+              </Button>
+              <Button component={Link} to={'/logout'}>
+                Logout
+              </Button>
+            </Group>
+          ) : (
+            <Group visibleFrom="sm">
+              <Button variant="default" component={Link} to={'/login'}>
+                Log in
+              </Button>
+              <Button component={Link} to={'/register'}>
+                Sign up
+              </Button>
+            </Group>
+          )}
 
           <Burger opened={drawerOpened} onClick={toggleDrawer} hiddenFrom="sm" />
         </Group>
@@ -104,14 +118,25 @@ export default function Header() {
 
           <Divider my="sm" />
 
-          <Group justify="center" grow pb="xl" px="md">
-            <Button variant="default" component={Link} to={'/login'}>
-              Log in
-            </Button>
-            <Button component={Link} to={'/register'}>
-              Sign up
-            </Button>
-          </Group>
+          {isAuthenticated ? (
+            <Group justify="center" grow pb="xl" px="md">
+              <Button variant="default" component={Link} to={'/login'}>
+                Create New
+              </Button>
+              <Button component={Link} to={'/logout'}>
+                Logout
+              </Button>
+            </Group>
+          ) : (
+            <Group justify="center" grow pb="xl" px="md">
+              <Button variant="default" component={Link} to={'/login'}>
+                Log in
+              </Button>
+              <Button component={Link} to={'/register'}>
+                Sign up
+              </Button>
+            </Group>
+          )}
         </ScrollArea>
       </Drawer>
     </Box>

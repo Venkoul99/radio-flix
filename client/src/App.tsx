@@ -20,15 +20,16 @@ export default function App() {
     }));
   };
 
-  const contextData = { 
+  const contextData = {
     ...authState,
+    isAuthenticated: !!authState.email,
     changeAuthState,
   };
 
   return (
     <MantineProvider theme={theme}>
       <AuthContext.Provider value={contextData}>
-      <Router />
+        <Router />
       </AuthContext.Provider>
     </MantineProvider>
   );

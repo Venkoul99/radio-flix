@@ -12,21 +12,7 @@ import {
 import classes from './Register.module.css';
 import { useRegister } from '@/hooks/useAuth';
 import { useNavigate } from 'react-router-dom';
-import { RegisterCredentials } from '@/types/RegisterCredentials';
-
-interface ExtendedRegisterCredentials extends RegisterCredentials {
-  fullName: string;
-  username: string;
-}
-
-interface FormError {
-  email?: string;
-  password?: string;
-  confirmPassword?: string;
-  fullName?: string;
-  username?: string;
-  general?: string;
-}
+import { ExtendedRegisterCredentials } from '../../types/ExtendedRegisterCredentials';
 
 const initialValues: ExtendedRegisterCredentials = {
   email: '',
@@ -38,7 +24,7 @@ const initialValues: ExtendedRegisterCredentials = {
 
 export default function Register() {
   const [formValues, setFormValues] = useState<ExtendedRegisterCredentials>(initialValues);
-  const [errors, setErrors] = useState<FormError>({});
+  const [errors, setErrors] = useState<RegisterFormError>({});
   const register = useRegister();
   const navigate = useNavigate();
 
@@ -48,7 +34,7 @@ export default function Register() {
   };
 
   const validate = () => {
-    const newErrors: FormError = {};
+    const newErrors: RegisterFormError = {};
     if (!/^\S+@\S+$/.test(formValues.email)) {
       newErrors.email = 'Invalid email format';
     }

@@ -11,24 +11,30 @@ import {
   Button,
 } from '@mantine/core';
 import classes from './Login.module.css';
+
+import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
+
 import { useForm } from '@/hooks/useForm';
+import { useLogin } from '@/hooks/useAuth';
 
 import { LoginCredentials } from '@/types/LoginCredentials';
-import { useNavigate } from 'react-router-dom';
-import { useLogin } from '@/hooks/useAuth';
+import { LoginFormError } from '@/types/LoginFormErrors';
 
 const initialValues: LoginCredentials = { email: '', password: '' };
 
 export default function Login() {
   const login = useLogin();
   const navigate = useNavigate();
+  const [errors, setErrors] = useState<LoginFormError>({});
+
   const loginHandler = async ({ email, password }: LoginCredentials) => {
     try {
       await login(email, password);
       navigate('/');
     } catch (err) {
       const error = err as Error;
-      console.log(error.message);
+      setErrors({ general: error.message });
     }
   };
 
@@ -50,6 +56,11 @@ export default function Login() {
       </Text>
       <form onSubmit={submitHandler}>
         <Paper withBorder shadow="md" p={30} mt={30} radius="md">
+          {errors.general && (
+            <Text color="red" mb="md">
+              {errors.general}
+            </Text>
+          )}
           <TextInput
             label="Email"
             placeholder="you@gmail.com"

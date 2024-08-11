@@ -13,23 +13,7 @@ import {
 import { useCreateNews } from '@/hooks/useNews';
 import { AuthContext } from '@/contexts/AuthContext';
 
-interface FormValues {
-  title: string;
-  imageUrl: string;
-  text: string;
-  highlighted: boolean;
-  publishedOn: string;
-  writtenBy: string;
-}
-
-interface FormErrors {
-  title?: string;
-  imageUrl?: string;
-  text?: string;
-  username?: string;
-}
-
-const initialValues: FormValues = {
+const initialValues: CreateNewsFormValues = {
   title: '',
   imageUrl: '',
   text: '',
@@ -39,10 +23,11 @@ const initialValues: FormValues = {
 };
 
 export default function CreateNews() {
-  const [formValues, setFormValues] = useState<FormValues>(initialValues);
-  const [errors, setErrors] = useState<FormErrors>({});
-  const createNews = useCreateNews();
+  const [formValues, setFormValues] = useState<CreateNewsFormValues>(initialValues);
+  const [errors, setErrors] = useState<CreateNewsFormErrors>({});
   const { firstName, lastName, username } = useContext(AuthContext);
+
+  const createNews = useCreateNews();
 
   const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -55,7 +40,7 @@ export default function CreateNews() {
   };
 
   const validate = (): boolean => {
-    const newErrors: FormErrors = {};
+    const newErrors: CreateNewsFormErrors = {};
     if (!formValues.title) newErrors.title = 'Title is required';
     if (!formValues.imageUrl) newErrors.imageUrl = 'Image URL is required';
     if (!formValues.text) newErrors.text = 'Text is required';

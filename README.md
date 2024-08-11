@@ -10,6 +10,7 @@ SoftUni React project
 - [x] Learn how mantine works and good practices
 
 ## 2. Create components
+
 - [x] Home
   - [x] Header
   - [ ] Radio Player (If I have time)
@@ -24,6 +25,7 @@ SoftUni React project
 - [x] Footer
 
 ## 5. Create pages and fix the Header with my pages:
+
 - [x] Radio flix (In left)
 - [x] Home
 - [x] News
@@ -31,29 +33,34 @@ SoftUni React project
 - [x] About us
 
 ## 6. Create Links to buttons
+
 - [x] Home
 - [x] Login
 - [x] Register
 - [x] Contact us
 - [x] About us
 - [x] News
-  
+
 ## 7. Create Service layer
+
 - [x] Service layer architecture (name: api seems legit)
 - [x] Abstract requester
 - [x] Add News API
-  
+
 ## 6. API Hooks
+
 - [x] Form Hook
 - [x] News Hooks
 - [ ] Comments Hooks
-  
+
 ## 7. Pages functions
+
 - [x] News page - get all news
 - [x] Details News page - get one new
 - [x] Home - Get last 3 news
 
 ## 8. Comments
+
 - [x] Create service for nested resource `comments`
 - [x] Post comment to server
 - [x] Read comments from server
@@ -61,6 +68,7 @@ SoftUni React project
 - [x] Clear form
 
 ## 9. Authentication
+
 - [ ] Auth API
   - [x] Login
   - [x] Register
@@ -68,7 +76,7 @@ SoftUni React project
 - [ ] Auth API Hook
   - [x] Login
   - [x] Register
-  - [ ] Logout 
+  - [ ] Logout
 - [x] Auth state & context
 - [x] Token management
 - [x] Login
@@ -77,8 +85,10 @@ SoftUni React project
   - [x] Show validation from server
 - [ ] Logout
 - [ ] Authorized Requests
+
 ## 10. UI Inplementation
-- [ ] Dynamic Navigation
+
+- [x] Dynamic Navigation
 - [ ] Create game
   - [ ] API function
-  - [ ] Hook 
+  - [ ] Hook

@@ -89,6 +89,7 @@ SoftUni React project
 ## 10. UI Inplementation
 
 - [x] Dynamic Navigation
-- [ ] Create game
+- [ ] Create news
+  - [x] Create page
   - [ ] API function
   - [ ] Hook

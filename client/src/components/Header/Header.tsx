@@ -66,7 +66,7 @@ export default function Header() {
           </Group>
           {isAuthenticated ? (
             <Group visibleFrom="sm">
-              <Button variant="default" component={Link} to={'/login'}>
+              <Button variant="default" component={Link} to={'/create-news'}>
                 Create New
               </Button>
               <Button component={Link} to={'/logout'}>
@@ -120,7 +120,7 @@ export default function Header() {
 
           {isAuthenticated ? (
             <Group justify="center" grow pb="xl" px="md">
-              <Button variant="default" component={Link} to={'/login'}>
+              <Button variant="default" component={Link} to={'/create-news'}>
                 Create New
               </Button>
               <Button component={Link} to={'/logout'}>

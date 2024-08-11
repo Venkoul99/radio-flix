@@ -6,6 +6,7 @@ import { ContactsPage } from './pages/Contacts.page';
 import { AboutUsPage } from './pages/AboutUs.page';
 import { NewsPage } from './pages/News.page';
 import { NewsItemDetailsPage } from './pages/news/NewsItemDetails';
+import { CreateNewsPage } from './pages/CreateNews.page';
 
 const router = createBrowserRouter([
   {
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
   {
     path: 'news/:newsId/details',
     element: <NewsItemDetailsPage />,
+  },
+  {
+    path: '/create-news',
+    element: <CreateNewsPage />,
   },
 ]);
 

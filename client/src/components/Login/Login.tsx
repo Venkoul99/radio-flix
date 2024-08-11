@@ -75,7 +75,7 @@ export default function Login() {
               Forgot password?
             </Anchor>
           </Group>
-          <Button fullWidth mt="xl">
+          <Button fullWidth mt="xl" type="submit">
             Sign in
           </Button>
         </Paper>

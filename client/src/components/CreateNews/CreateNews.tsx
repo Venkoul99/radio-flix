@@ -1,7 +1,8 @@
-import { useState, ChangeEvent, FormEvent } from 'react';
+import { useState, useContext, ChangeEvent, FormEvent } from 'react';
 import {
   TextInput,
   Textarea,
+  Text,
   Checkbox,
   Button,
   Card,
@@ -9,6 +10,8 @@ import {
   Divider,
   Container,
 } from '@mantine/core';
+import { useCreateNews } from '@/hooks/useNews';
+import { AuthContext } from '@/contexts/AuthContext';
 
 interface FormValues {
   title: string;
@@ -23,8 +26,7 @@ interface FormErrors {
   title?: string;
   imageUrl?: string;
   text?: string;
-  publishedOn?: string;
-  writtenBy?: string;
+  username?: string;
 }
 
 const initialValues: FormValues = {
@@ -39,7 +41,8 @@ const initialValues: FormValues = {
 export default function CreateNews() {
   const [formValues, setFormValues] = useState<FormValues>(initialValues);
   const [errors, setErrors] = useState<FormErrors>({});
-  const createNews = {};
+  const createNews = useCreateNews();
+  const { firstName, lastName, username } = useContext(AuthContext);
 
   const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -56,8 +59,7 @@ export default function CreateNews() {
     if (!formValues.title) newErrors.title = 'Title is required';
     if (!formValues.imageUrl) newErrors.imageUrl = 'Image URL is required';
     if (!formValues.text) newErrors.text = 'Text is required';
-    if (!formValues.publishedOn) newErrors.publishedOn = 'Publish date is required';
-    if (!formValues.writtenBy) newErrors.writtenBy = 'Author name is required';
+    if (!username) newErrors.username = 'Username is required! Please log into your account.';
 
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
@@ -67,12 +69,25 @@ export default function CreateNews() {
     e.preventDefault();
     if (!validate()) return;
 
+    const currentDate = new Date().toISOString();
+    const authorName = `${firstName} ${lastName}`;
+
+    if (!username) {
+    }
+
     try {
-      //await createNews(formValues);
-      // Handle successful news creation, e.g., navigate to the list of news or clear the form
+      await createNews({
+        title: formValues.title,
+        imageUrl: formValues.imageUrl,
+        text: formValues.text,
+        highlighted: formValues.highlighted,
+        publishedOn: currentDate,
+        writtenBy: authorName,
+        username: username ?? '',
+        comments: [],
+      });
     } catch (err) {
-      // Handle errors
-      console.error(err);
+      console.error('Failed to create news:', err);
     }
   };
 
@@ -80,6 +95,12 @@ export default function CreateNews() {
     <Container size={600} my={40}>
       <Card shadow="sm" padding="lg" radius="md" withBorder>
         <form onSubmit={handleSubmit}>
+          {errors.username && (
+            <Text color="red" mb="md">
+              {errors.username}
+            </Text>
+          )}
+
           <TextInput
             label="Title"
             name="title"
@@ -107,25 +128,8 @@ export default function CreateNews() {
             required
             error={errors.text}
           />
-          <TextInput
-            label="Published On"
-            name="publishedOn"
-            value={formValues.publishedOn}
-            onChange={handleChange}
-            placeholder="Publish date"
-            required
-            error={errors.publishedOn}
-          />
-          <TextInput
-            label="Written By"
-            name="writtenBy"
-            value={formValues.writtenBy}
-            onChange={handleChange}
-            placeholder="Author"
-            required
-            error={errors.writtenBy}
-          />
           <Checkbox
+            mt="md"
             label="Highlighted"
             name="highlighted"
             checked={formValues.highlighted}

@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import newsApi from '../api/news-api';
 import { NewsItem } from '@/types/NewsItem';
+import { CreateNews } from '@/types/CreateNews';
 
 export function useGetAllNews(): [NewsItem[], React.Dispatch<React.SetStateAction<NewsItem[]>>] {
   const [news, setNews] = useState<NewsItem[]>([]);
@@ -34,4 +35,10 @@ export function useGetOneNews(newsId: string) {
   }, [newsId]);
 
   return [news, setNews] as const;
+}
+
+export function useCreateNews() {
+  const newsCreateHandler = (newsData: CreateNews) => newsApi.create(newsData);
+
+  return newsCreateHandler;
 }

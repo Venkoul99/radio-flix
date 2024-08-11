@@ -1,5 +1,6 @@
 import { NewsItem } from '@/types/NewsItem';
 import * as request from './requester';
+import { CreateNews } from '@/types/CreateNews';
 
 const BASE_URL = 'http://localhost:3030/jsonstore/news';
 
@@ -13,7 +14,7 @@ export const getAll = async (): Promise<NewsItem[]> => {
 
 export const getOne = (newsId: string): Promise<NewsItem> => request.get<NewsItem>(`${BASE_URL}/${newsId}`);
 
-export const create = (newsData: Omit<NewsItem, 'id'>): Promise<NewsItem> => request.post<NewsItem>(`${BASE_URL}`, newsData);
+export const create = (newsData: Omit<CreateNews, 'id'>): Promise<CreateNews> => request.post<NewsItem>(`${BASE_URL}`, newsData);
 
 const newsApi = {
   getOne,

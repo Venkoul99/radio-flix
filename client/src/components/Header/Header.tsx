@@ -44,25 +44,25 @@ export default function Header() {
     <Box pb={60}>
       <header className={classes.header}>
         <Group justify="space-between" h="100%">
-          <a href="/" className={classes.link}>
+          <Link to="/" className={classes.link}>
             RadioFlix
-          </a>
+          </Link>
 
           <Group h="100%" gap={0} visibleFrom="sm">
-            <a href="/" className={classes.link}>
+            <Anchor component={Link} to="/" className={classes.link}>
               Home
-            </a>
+            </Anchor>
 
-            <a href="/news" className={classes.link}>
+            <Anchor component={Link} to="/news" className={classes.link}>
               News
-            </a>
+            </Anchor>
 
-            <a href="/contacts" className={classes.link}>
+            <Anchor component={Link} to="/contacts" className={classes.link}>
               Contacts
-            </a>
-            <a href="/about-us" className={classes.link}>
+            </Anchor>
+            <Anchor component={Link} to="/about-us" className={classes.link}>
               About us
-            </a>
+            </Anchor>
           </Group>
           {isAuthenticated ? (
             <Group visibleFrom="sm">
@@ -100,21 +100,21 @@ export default function Header() {
         <ScrollArea h={`calc(100vh - ${rem(80)})`} mx="-md">
           <Divider my="sm" />
 
-          <a href="/" className={classes.link}>
+          <Anchor component={Link} to="/" className={classes.link}>
             Home
-          </a>
+          </Anchor>
 
-          <a href="/news" className={classes.link}>
+          <Anchor component={Link} to="/news" className={classes.link}>
             News
-          </a>
+          </Anchor>
 
-          <a href="/contacts" className={classes.link}>
+          <Anchor component={Link} to="/contacts" className={classes.link}>
             Contacts
-          </a>
+          </Anchor>
 
-          <a href="/about-us" className={classes.link}>
+          <Anchor component={Link} color="indigo" to="/about-us">
             About us
-          </a>
+          </Anchor>
 
           <Divider my="sm" />
 

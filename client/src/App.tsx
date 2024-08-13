@@ -5,32 +5,32 @@ import { theme } from './theme';
 import { AuthContext } from './contexts/AuthContext';
 import { useState } from 'react';
 
-export default function App() {
-  const [authState, setAuthState] = useState<AuthState>({
-    email: '',
-    accessToken: '',
-    isAuthenticated: false,
-    changeAuthState: () => {},
-  });
+interface AuthStateData extends Pick<AuthState, 'email' | 'accessToken' | 'isAuthenticated'> {}
 
-  const changeAuthState = (newState: Partial<AuthState>) => {
-    setAuthState((prevState) => ({
-      ...prevState,
-      ...newState,
-    }));
+export default function App() {
+  const savedState = localStorage.getItem('__state');
+  const [authState, setAuthState] = useState<AuthStateData>(
+    savedState ? JSON.parse(savedState) : { email: '', accessToken: '', isAuthenticated: false }
+  );
+
+  const changeAuthState = (newState: Partial<AuthStateData>) => {
+    const mergedState = { ...authState, ...newState };
+
+    setAuthState(mergedState);
+    localStorage.setItem('__state', JSON.stringify(mergedState));
   };
 
-  const contextData = {
+  const contextData: AuthState = {
     ...authState,
     isAuthenticated: !!authState.email,
     changeAuthState,
   };
 
   return (
-    <MantineProvider theme={theme}>
-      <AuthContext.Provider value={contextData}>
+    <AuthContext.Provider value={contextData}>
+      <MantineProvider theme={theme}>
         <Router />
-      </AuthContext.Provider>
-    </MantineProvider>
+      </MantineProvider>
+    </AuthContext.Provider>
   );
 }

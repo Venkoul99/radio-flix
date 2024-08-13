@@ -6,5 +6,4 @@ interface AuthState {
     accessToken?: string;
     isAuthenticated?: boolean
     changeAuthState: (newState: Partial<AuthState>) => void;
-
 }

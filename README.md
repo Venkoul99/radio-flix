@@ -51,7 +51,7 @@ SoftUni React project
 
 - [x] Form Hook
 - [x] News Hooks
-- [ ] Comments Hooks
+- [x] Comments Hooks
 
 ## 7. Pages functions
 

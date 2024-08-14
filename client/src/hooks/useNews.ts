@@ -20,6 +20,23 @@ export function useGetAllNews(): [NewsItem[], React.Dispatch<React.SetStateActio
   return [news, setNews];
 }
 
+export function useGetLastThree(): [NewsItem[], React.Dispatch<React.SetStateAction<NewsItem[]>>] {
+  const [news, setNews] = useState<NewsItem[]>([]);
+
+  useEffect(() => {
+    (async () => {
+      try {
+        const result = await newsApi.getLastThree();
+        setNews(result);
+      } catch (error) {
+        console.error('Failed to fetch news:', error);
+      }
+    })();
+  }, []);
+
+  return [news, setNews];
+}
+
 export function useGetOneNews(newsId: string) {
   const [news, setNews] = useState<NewsItem | null>(null);;
 

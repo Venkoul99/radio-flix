@@ -6,7 +6,7 @@
         "imageUrl": "/images/avicii.jpg",
         "_id": "39563813-afea-4dbc-9234-0b00352d7dea",
         "writtenBy": "John Doe",
-        "publishedOn": "2023-08-01",
+        "publishedOn": "1723643855000",
         "username": "johndoe123"
     },
     "fe8c35d5-b69e-489c-918b-7daaa2b68e62": {
@@ -16,7 +16,7 @@
         "imageUrl": "/images/tiesto.jpg",
         "_id": "fe8c35d5-b69e-489c-918b-7daaa2b68e62",
         "writtenBy": "Jane Smith",
-        "publishedOn": "2023-07-15",
+        "publishedOn": "1692021455000",
         "username": "janesmith456"
     },
     "a61c1d15-824d-48f3-a171-2950e1a196b8": {
@@ -26,7 +26,7 @@
         "imageUrl": "/images/armin.jpg",
         "_id": "a61c1d15-824d-48f3-a171-2950e1a196b8",
         "writtenBy": "Alice Johnson",
-        "publishedOn": "2023-06-30",
+        "publishedOn": "1702565855000",
         "username": "alicejohnson789"
     },
     "d2b0e0ae-83f1-4a3f-8107-0cbfbfa6e5b0": {
@@ -36,7 +36,7 @@
         "imageUrl": "/images/calvin-harris.jpg",
         "_id": "d2b0e0ae-83f1-4a3f-8107-0cbfbfa6e5b0",
         "writtenBy": "Bob Brown",
-        "publishedOn": "2023-07-20",
+        "publishedOn": "1716127055000",
         "username": "bobbrown321"
     },
     "f6b8a1d2-1c71-4b1a-bc4b-fb3a93c8c056": {
@@ -46,7 +46,7 @@
         "imageUrl": "/images/david-guetta.jpg",
         "_id": "f6b8a1d2-1c71-4b1a-bc4b-fb3a93c8c056",
         "writtenBy": "Charlie Davis",
-        "publishedOn": "2023-05-10",
+        "publishedOn": "1695131855000",
         "username": "charliedavis654"
     },
     "a3e6c8d7-929d-4a7e-9302-7d72c9264d1a": {
@@ -56,7 +56,7 @@
         "imageUrl": "/images/zedd.jpg",
         "_id": "a3e6c8d7-929d-4a7e-9302-7d72c9264d1a",
         "writtenBy": "Dana Evans",
-        "publishedOn": "2023-08-05",
+        "publishedOn": "1695563855000",
         "username": "danaevans987"
     }
 }

@@ -1,6 +1,7 @@
 import { NewsComment } from "./NewsComment";
 
 export interface CreateNews {
+  _id: string;
   title: string;
   text: string;
   imageUrl: string;

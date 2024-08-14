@@ -12,6 +12,7 @@ import {
 } from '@mantine/core';
 import { useCreateNews } from '@/hooks/useNews';
 import { AuthContext } from '@/contexts/AuthContext';
+import { useNavigate } from 'react-router-dom';
 
 const initialValues: CreateNewsFormValues = {
   title: '',
@@ -23,6 +24,7 @@ const initialValues: CreateNewsFormValues = {
 };
 
 export default function CreateNews() {
+  const navigate = useNavigate();
   const [formValues, setFormValues] = useState<CreateNewsFormValues>(initialValues);
   const [errors, setErrors] = useState<CreateNewsFormErrors>({});
   const { firstName, lastName, username } = useContext(AuthContext);
@@ -61,7 +63,7 @@ export default function CreateNews() {
     }
 
     try {
-      await createNews({
+      const { _id: newsId } = await createNews({
         title: formValues.title,
         imageUrl: formValues.imageUrl,
         text: formValues.text,
@@ -71,6 +73,7 @@ export default function CreateNews() {
         username: username ?? '',
         comments: [],
       });
+      navigate(`/news/${newsId}/details`);
     } catch (err) {
       console.error('Failed to create news:', err);
     }

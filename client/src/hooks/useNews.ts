@@ -38,7 +38,7 @@ export function useGetOneNews(newsId: string) {
 }
 
 export function useCreateNews() {
-  const newsCreateHandler = (newsData: CreateNews) => newsApi.create(newsData);
+  const newsCreateHandler = (newsData: Omit<CreateNews, '_id'>) => newsApi.create(newsData);
 
   return newsCreateHandler;
 }

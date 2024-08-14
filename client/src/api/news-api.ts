@@ -14,7 +14,7 @@ export const getAll = async (): Promise<NewsItem[]> => {
 
 export const getOne = (newsId: string): Promise<NewsItem> => request.get<NewsItem>(`${BASE_URL}/${newsId}`);
 
-export const create = (newsData: Omit<CreateNews, 'id'>): Promise<CreateNews> => request.post<NewsItem>(`${BASE_URL}`, newsData);
+export const create = (newsData: Omit<CreateNews, '_id'>): Promise<CreateNews> => request.post<NewsItem>(`${BASE_URL}`, newsData);
 
 const newsApi = {
   getOne,

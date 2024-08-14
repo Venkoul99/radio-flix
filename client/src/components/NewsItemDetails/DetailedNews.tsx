@@ -3,10 +3,13 @@ import { Card, Image, Text, Badge, Group, Divider, Avatar, Button } from '@manti
 import { IconCalendar } from '@tabler/icons-react';
 import dayjs from 'dayjs';
 import { useParams } from 'react-router-dom';
+import { AuthContext } from '@/contexts/AuthContext';
+import { useContext } from 'react';
 
 export default function DetailedNews() {
   const { newsId } = useParams<{ newsId: string }>();
   const [news] = useGetOneNews(newsId || '');
+  const { _id } = useContext(AuthContext);
 
   if (!news) {
     return <div>Loading...</div>;
@@ -59,18 +62,20 @@ export default function DetailedNews() {
 
       <Divider my="md" />
 
-      <Group
-        gap="sm"
-        mt="md"
-        style={{
-          display: 'flex',
-          justifyContent: 'right',
-          gap: '10px',
-        }}
-      >
-        <Button color="blue">Edit</Button>
-        <Button color="red">Delete</Button>
-      </Group>
+      {news._ownerId == _id && (
+        <Group
+          gap="sm"
+          mt="md"
+          style={{
+            display: 'flex',
+            justifyContent: 'right',
+            gap: '10px',
+          }}
+        >
+          <Button color="blue">Edit</Button>
+          <Button color="red">Delete</Button>
+        </Group>
+      )}
     </Card>
   );
 }

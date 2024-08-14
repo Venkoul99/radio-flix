@@ -27,7 +27,7 @@ export default function CreateNews() {
   const navigate = useNavigate();
   const [formValues, setFormValues] = useState<CreateNewsFormValues>(initialValues);
   const [errors, setErrors] = useState<CreateNewsFormErrors>({});
-  const { firstName, lastName, username } = useContext(AuthContext);
+  const { firstName, lastName, username, _id } = useContext(AuthContext);
 
   const createNews = useCreateNews();
 
@@ -59,18 +59,15 @@ export default function CreateNews() {
     const currentDate = new Date().getTime();
     const authorName = `${firstName} ${lastName}`;
 
-    if (!username) {
-    }
-
     try {
       const { _id: newsId } = await createNews({
+        _ownerId: _id,
         title: formValues.title,
         imageUrl: formValues.imageUrl,
         text: formValues.text,
         highlighted: formValues.highlighted,
         publishedOn: currentDate.toString(),
         writtenBy: authorName ?? '',
-        username: username ?? '',
         comments: [],
       });
       navigate(`/news/${newsId}/details`);

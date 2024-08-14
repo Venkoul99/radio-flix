@@ -2,6 +2,7 @@ import { NewsComment } from "./NewsComment";
 
 export interface NewsItem {
   _id: string;
+  _ownerId: string;
   title: string;
   text: string;
   imageUrl: string;

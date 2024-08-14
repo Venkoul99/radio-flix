@@ -94,6 +94,14 @@ SoftUni React project
   - [x] API function
   - [x] Hook
 
+## 11. Some Fixes on news:
+- [x] Show Edit and Delete buttons only if creator
+- [ ] Create pop-up and function to show it for Edit
+- [ ] Create function for deletion of the news
+- [ ] Take First and Last name of user when registering
+- [ ] Show First and Last name of the user in the news
+
+
 ## Notes
 1. Latest Games
 2. URL `http://localhost:3030/data/games?sortBy=_createdOn%20desc&pageSize=3`

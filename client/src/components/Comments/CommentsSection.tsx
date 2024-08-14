@@ -44,7 +44,11 @@ export default function CommentsSection() {
   };
 
   return (
-    <Box mt="md" p="md" style={{ border: '1px solid #eaeaea' }}>
+    <Box
+      mt="md"
+      p="md"
+      style={{ border: '1px solid #eaeaea', maxWidth: '600px', margin: '0 auto' }}
+    >
       <Stack gap="sm" mb="md">
         <Text size="lg">Comments</Text>
         {news?.comments && Object.values(news.comments).length > 0 ? (

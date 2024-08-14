@@ -4,6 +4,7 @@ import { Router } from './Router';
 import { theme } from './theme';
 import { AuthContext } from './contexts/AuthContext';
 import { useState } from 'react';
+import './App.css';
 
 interface AuthStateData extends Pick<AuthState, 'email' | 'accessToken' | 'isAuthenticated'> {}
 

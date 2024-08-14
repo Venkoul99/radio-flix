@@ -1,5 +1,5 @@
 import { useGetOneNews } from '@/hooks/useNews';
-import { Card, Image, Text, Badge, Group, Divider, Avatar } from '@mantine/core';
+import { Card, Image, Text, Badge, Group, Divider, Avatar, Button } from '@mantine/core';
 import { IconCalendar } from '@tabler/icons-react';
 import { useParams } from 'react-router-dom';
 
@@ -12,13 +12,23 @@ export default function DetailedNews() {
   }
 
   return (
-    <Card shadow="sm" padding="lg" radius="md" withBorder>
+    <Card
+      shadow="sm"
+      padding="lg"
+      radius="md"
+      withBorder
+      style={{
+        width: 'fit-content',
+        maxWidth: '50%',
+        margin: '0 auto',
+      }}
+    >
       <Card.Section>
         <Image
           src={news.imageUrl}
           alt={news.title}
           style={{
-            width: '50%',
+            width: '100%',
             height: 'auto',
             objectFit: 'cover',
             objectPosition: 'top',
@@ -41,13 +51,25 @@ export default function DetailedNews() {
       </Group>
 
       <Group gap="xs" mb="md">
-        <Avatar size={24} src="https://randomuser.me/api/portraits/men/1.jpg" />
         <Text size="sm" color="dimmed">
           {news.writtenBy}
         </Text>
       </Group>
 
       <Divider my="md" />
+
+      <Group
+        gap="sm"
+        mt="md"
+        style={{
+          display: 'flex',
+          justifyContent: 'right',
+          gap: '10px',
+        }}
+      >
+        <Button color="blue">Edit</Button>
+        <Button color="red">Delete</Button>
+      </Group>
     </Card>
   );
 }

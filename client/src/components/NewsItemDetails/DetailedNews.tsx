@@ -1,6 +1,7 @@
 import { useGetOneNews } from '@/hooks/useNews';
 import { Card, Image, Text, Badge, Group, Divider, Avatar, Button } from '@mantine/core';
 import { IconCalendar } from '@tabler/icons-react';
+import dayjs from 'dayjs';
 import { useParams } from 'react-router-dom';
 
 export default function DetailedNews() {
@@ -46,7 +47,7 @@ export default function DetailedNews() {
       <Group gap="xs" mb="md">
         <IconCalendar size={16} />
         <Text size="sm" color="dimmed">
-          {news.publishedOn}
+          {dayjs(+news.publishedOn).format('YYYY-MM-DD HH:mm')}
         </Text>
       </Group>
 

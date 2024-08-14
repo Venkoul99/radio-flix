@@ -56,7 +56,7 @@ export default function CreateNews() {
     e.preventDefault();
     if (!validate()) return;
 
-    const currentDate = new Date().toISOString();
+    const currentDate = new Date().getTime();
     const authorName = `${firstName} ${lastName}`;
 
     if (!username) {
@@ -68,8 +68,8 @@ export default function CreateNews() {
         imageUrl: formValues.imageUrl,
         text: formValues.text,
         highlighted: formValues.highlighted,
-        publishedOn: currentDate,
-        writtenBy: authorName,
+        publishedOn: currentDate.toString(),
+        writtenBy: authorName ?? '',
         username: username ?? '',
         comments: [],
       });

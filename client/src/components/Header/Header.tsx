@@ -22,7 +22,7 @@ export default function Header() {
   const [linksOpened, { toggle: toggleLinks }] = useDisclosure(false);
   const theme = useMantineTheme();
 
-  const { isAuthenticated, logout } = useContext(AuthContext);
+  const { isAuthenticated, logout, _id } = useContext(AuthContext);
 
   return (
     <Box pb={60}>
@@ -50,10 +50,15 @@ export default function Header() {
           </Group>
           {isAuthenticated ? (
             <Group visibleFrom="sm">
+              <Button variant="default" component={Link} to={`/news/${_id}/mynews`}>
+                My News
+              </Button>
               <Button variant="default" component={Link} to={'/create-news'}>
                 Create New
               </Button>
-              <Button onClick={logout}>Logout</Button>
+              <Button onClick={logout} variant="subtle" color="gray">
+                Logout
+              </Button>
             </Group>
           ) : (
             <Group visibleFrom="sm">
@@ -102,10 +107,15 @@ export default function Header() {
 
           {isAuthenticated ? (
             <Group justify="center" grow pb="xl" px="md">
+              <Button variant="default" component={Link} to={`/news/${_id}/mynews`}>
+                My News
+              </Button>
               <Button variant="default" component={Link} to={'/create-news'}>
                 Create New
               </Button>
-              <Button onClick={logout}>Logout</Button>
+              <Button onClick={logout} variant="subtle" color="gray">
+                Logout
+              </Button>
             </Group>
           ) : (
             <Group justify="center" grow pb="xl" px="md">

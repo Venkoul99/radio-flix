@@ -9,4 +9,5 @@ export const AuthContext = createContext<AuthState>({
     accessToken: '',
     isAuthenticated: false,
     changeAuthState: () => {},
+    logout: () => {},
 });

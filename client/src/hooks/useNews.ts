@@ -20,6 +20,24 @@ export function useGetAllNews(): [NewsItem[], React.Dispatch<React.SetStateActio
   return [news, setNews];
 }
 
+export function useGetUserNews(_id: string): [NewsItem[], React.Dispatch<React.SetStateAction<NewsItem[]>>] {
+  const [news, setNews] = useState<NewsItem[]>([]);
+
+  useEffect(() => {
+    (async () => {
+      try {
+        const result = await newsApi.getAll();
+        setNews(result.filter((x) => x._ownerId == _id));
+      } catch (error) {
+        console.error('Failed to fetch news:', error);
+      }
+    })();
+  }, []);
+
+  return [news, setNews];
+}
+
+
 export function useGetLastThree(): [NewsItem[], React.Dispatch<React.SetStateAction<NewsItem[]>>] {
   const [news, setNews] = useState<NewsItem[]>([]);
 

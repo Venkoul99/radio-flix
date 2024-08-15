@@ -10,6 +10,8 @@ import { CreateNewsPage } from './pages/CreateNews.page';
 import React, { useContext } from 'react';
 import { AuthContext } from './contexts/AuthContext';
 import { EditNewsPage } from './pages/EditNews.page';
+// import UserDetails from './components/UserDetails/UserDetails';
+import { MyNewsPage } from './pages/MyNews.page';
 
 export function AuthHandler(props: { children?: React.ReactNode }) {
   const authState = useContext(AuthContext);
@@ -75,6 +77,14 @@ const router = createBrowserRouter([
       {
         path: '/news/:newsId/edit',
         element: <EditNewsPage />,
+      },
+      // {
+      //   path: '/user/:userId/details',
+      //   element: <UserDetails />,
+      // },
+      {
+        path: '/news/:userId/mynews',
+        element: <MyNewsPage />,
       },
     ],
   },

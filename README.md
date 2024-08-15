@@ -99,6 +99,13 @@ SoftUni React project
 - [x] Take First and Last name of user when registering
 - [x] Show First and Last name of the user in the news
 
+## 12. Account details:
+No time for documentation just do it! Blame the user if something happens
+
+Looks like account details cannot be edited, the information can be taken only from Login
+
+## 13. Show my news
+Button to show only my news
 
 ## Notes
 1. Latest Games

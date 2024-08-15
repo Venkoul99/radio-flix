@@ -21,6 +21,7 @@ export default function NewsItem({ news }: NewsItemProps) {
           height={350}
           alt={news.title}
           fit="cover"
+          fallbackSrc="https://cdn.dribbble.com/users/55871/screenshots/2158022/media/95f08ed3812af28b93fa534fb5d277b3.jpg"
           style={{ objectPosition: 'top' }}
         />
       </Card.Section>

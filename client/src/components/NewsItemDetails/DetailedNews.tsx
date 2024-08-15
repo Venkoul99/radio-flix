@@ -46,6 +46,7 @@ export default function DetailedNews() {
           <Image
             src={news.imageUrl}
             alt={news.title}
+            fallbackSrc="https://cdn.dribbble.com/users/55871/screenshots/2158022/media/95f08ed3812af28b93fa534fb5d277b3.jpg"
             style={{
               width: '100%',
               height: 'auto',

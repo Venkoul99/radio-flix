@@ -56,7 +56,12 @@ export default function AboutUs() {
         {teamMembers.map((member) => (
           <Card key={member.name} shadow="sm">
             <Card.Section>
-              <Image src={member.image} height={160} alt={member.name} />
+              <Image
+                src={member.image}
+                height={160}
+                fallbackSrc="https://img.freepik.com/free-vector/illustration-gallery-icon_53876-27002.jpg"
+                alt={member.name}
+              />
             </Card.Section>
             <Group mt="md" mb="xs">
               <Text>{member.name}</Text>

@@ -108,6 +108,7 @@ Looks like account details cannot be edited, the information can be taken only f
 [x] Button to show only my news
 
 ## 14. Fix Router.tsx
+[ ]
 
 ## Notes
 1. Latest Games

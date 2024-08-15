@@ -1,5 +1,5 @@
 import { useGetOneNews } from '@/hooks/useNews';
-import { Card, Image, Text, Badge, Group, Divider, Avatar, Button } from '@mantine/core';
+import { Card, Image, Text, Badge, Group, Divider, Avatar, Button, Title } from '@mantine/core';
 import { IconCalendar } from '@tabler/icons-react';
 import dayjs from 'dayjs';
 import { Link, useNavigate, useParams } from 'react-router-dom';
@@ -41,20 +41,23 @@ export default function DetailedNews() {
         margin: '0 auto',
       }}
     >
-      <Card.Section>
-        <Image
-          src={news.imageUrl}
-          alt={news.title}
-          style={{
-            width: '100%',
-            height: 'auto',
-            objectFit: 'cover',
-            objectPosition: 'top',
-          }}
-        />
-      </Card.Section>
+      {news.imageUrl ? (
+        <Card.Section>
+          <Image
+            src={news.imageUrl}
+            alt={news.title}
+            style={{
+              width: '100%',
+              height: 'auto',
+              objectFit: 'cover',
+              objectPosition: 'top',
+            }}
+          />
+        </Card.Section>
+      ) : null}
 
       <Group mt="md" mb="xs">
+        <Title order={3}>{news.title}</Title>
         <Text>{news.text}</Text>
         {news.highlighted ? <Badge color="pink">HIGHLIGHTED</Badge> : null}
       </Group>

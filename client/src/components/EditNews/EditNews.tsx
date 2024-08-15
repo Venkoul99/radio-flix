@@ -1,5 +1,15 @@
 import { useState, useEffect } from 'react';
-import { TextInput, Textarea, Text, Button, Card, Group, Divider, Container } from '@mantine/core';
+import {
+  TextInput,
+  Textarea,
+  Text,
+  Button,
+  Card,
+  Group,
+  Divider,
+  Container,
+  Title,
+} from '@mantine/core';
 import { useGetOneNews } from '@/hooks/useNews';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useForm } from '@/hooks/useForm';
@@ -65,40 +75,45 @@ export default function EditNews() {
   }, [news, setValues]);
 
   return (
-    <Container size={600} my={40}>
-      <Card shadow="sm" padding="lg" radius="md" withBorder>
-        <form onSubmit={submitHandler}>
-          <TextInput
-            label="Title"
-            name="title"
-            value={values.title}
-            onChange={changeHandler}
-            placeholder="News title"
-            required
-          />
-          <TextInput
-            label="Image URL"
-            name="imageUrl"
-            value={values.imageUrl}
-            onChange={changeHandler}
-            placeholder="Image URL"
-            required
-          />
-          <Textarea
-            label="Text"
-            name="text"
-            value={values.text}
-            onChange={changeHandler}
-            placeholder="News content"
-            required
-          />
+    <>
+      <Title order={2} style={{ textAlign: 'center' }}>
+        Edit New
+      </Title>
+      <Container size={600} my={40}>
+        <Card shadow="sm" padding="lg" radius="md" withBorder>
+          <form onSubmit={submitHandler}>
+            <TextInput
+              label="Title"
+              name="title"
+              value={values.title}
+              onChange={changeHandler}
+              placeholder="News title"
+              required
+            />
+            <TextInput
+              label="Image URL"
+              name="imageUrl"
+              value={values.imageUrl}
+              onChange={changeHandler}
+              placeholder="Image URL"
+              required
+            />
+            <Textarea
+              label="Text"
+              name="text"
+              value={values.text}
+              onChange={changeHandler}
+              placeholder="News content"
+              required
+            />
 
-          <Divider my="md" />
-          <Group mt="md">
-            <Button type="submit">Edit News</Button>
-          </Group>
-        </form>
-      </Card>
-    </Container>
+            <Divider my="md" />
+            <Group mt="md">
+              <Button type="submit">Edit News</Button>
+            </Group>
+          </form>
+        </Card>
+      </Container>
+    </>
   );
 }

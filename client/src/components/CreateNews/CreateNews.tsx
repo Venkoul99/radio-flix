@@ -9,6 +9,7 @@ import {
   Group,
   Divider,
   Container,
+  Title,
 } from '@mantine/core';
 import { useCreateNews } from '@/hooks/useNews';
 import { AuthContext } from '@/contexts/AuthContext';
@@ -77,55 +78,60 @@ export default function CreateNews() {
   };
 
   return (
-    <Container size={600} my={40}>
-      <Card shadow="sm" padding="lg" radius="md" withBorder>
-        <form onSubmit={handleSubmit}>
-          {errors.username && (
-            <Text color="red" mb="md">
-              {errors.username}
-            </Text>
-          )}
+    <>
+      <Title order={2} style={{ textAlign: 'center' }}>
+        Create New
+      </Title>
+      <Container size={600} my={40}>
+        <Card shadow="sm" padding="lg" radius="md" withBorder>
+          <form onSubmit={handleSubmit}>
+            {errors.username && (
+              <Text color="red" mb="md">
+                {errors.username}
+              </Text>
+            )}
 
-          <TextInput
-            label="Title"
-            name="title"
-            value={formValues.title}
-            onChange={handleChange}
-            placeholder="News title"
-            required
-            error={errors.title}
-          />
-          <TextInput
-            label="Image URL"
-            name="imageUrl"
-            value={formValues.imageUrl}
-            onChange={handleChange}
-            placeholder="Image URL"
-            required
-            error={errors.imageUrl}
-          />
-          <Textarea
-            label="Text"
-            name="text"
-            value={formValues.text}
-            onChange={handleChange}
-            placeholder="News content"
-            required
-            error={errors.text}
-          />
-          <Checkbox
-            mt="md"
-            label="Highlighted"
-            name="highlighted"
-            checked={formValues.highlighted}
-            onChange={handleCheckboxChange}
-          />
-          <Divider my="md" />
-          <Group mt="md">
-            <Button type="submit">Create News</Button>
-          </Group>
-        </form>
-      </Card>
-    </Container>
+            <TextInput
+              label="Title"
+              name="title"
+              value={formValues.title}
+              onChange={handleChange}
+              placeholder="News title"
+              required
+              error={errors.title}
+            />
+            <TextInput
+              label="Image URL"
+              name="imageUrl"
+              value={formValues.imageUrl}
+              onChange={handleChange}
+              placeholder="Image URL"
+              required
+              error={errors.imageUrl}
+            />
+            <Textarea
+              label="Text"
+              name="text"
+              value={formValues.text}
+              onChange={handleChange}
+              placeholder="News content"
+              required
+              error={errors.text}
+            />
+            <Checkbox
+              mt="md"
+              label="Highlighted"
+              name="highlighted"
+              checked={formValues.highlighted}
+              onChange={handleCheckboxChange}
+            />
+            <Divider my="md" />
+            <Group mt="md">
+              <Button type="submit">Create News</Button>
+            </Group>
+          </form>
+        </Card>
+      </Container>
+    </>
   );
 }

@@ -69,22 +69,20 @@ SoftUni React project
 
 ## 9. Authentication
 
-- [ ] Auth API
+- [x] Auth API
   - [x] Login
   - [x] Register
-  - [ ] Logout
-- [ ] Auth API Hook
+- [x] Auth API Hook
   - [x] Login
   - [x] Register
-  - [ ] Logout
 - [x] Auth state & context
 - [x] Token management
 - [x] Login
 - [x] Register
   - [x] Add form validation
   - [x] Show validation from server
-- [ ] Logout
-- [ ] Authorized Requests
+- [x] Logout
+- [x] Authorized Requests
 
 ## 10. UI Inplementation
 
@@ -98,8 +96,8 @@ SoftUni React project
 - [x] Show Edit and Delete buttons only if creator
 - [x] Create pop-up and function to show it for Edit
 - [x] Create function for deletion of the news
-- [ ] Take First and Last name of user when registering
-- [ ] Show First and Last name of the user in the news
+- [x] Take First and Last name of user when registering
+- [x] Show First and Last name of the user in the news
 
 
 ## Notes

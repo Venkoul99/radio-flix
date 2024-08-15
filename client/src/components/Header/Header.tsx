@@ -1,33 +1,17 @@
 import {
-  HoverCard,
   Group,
   Button,
-  UnstyledButton,
-  Text,
-  SimpleGrid,
-  ThemeIcon,
   Anchor,
   Divider,
-  Center,
   Box,
   Burger,
   Drawer,
-  Collapse,
   ScrollArea,
   rem,
   useMantineTheme,
 } from '@mantine/core';
-import { MantineLogo } from '@mantinex/mantine-logo';
 import { useDisclosure } from '@mantine/hooks';
-import {
-  IconNotification,
-  IconCode,
-  IconBook,
-  IconChartPie3,
-  IconFingerprint,
-  IconCoin,
-  IconChevronDown,
-} from '@tabler/icons-react';
+
 import classes from './Header.module.css';
 import { Link } from 'react-router-dom';
 import { useContext } from 'react';
@@ -38,7 +22,7 @@ export default function Header() {
   const [linksOpened, { toggle: toggleLinks }] = useDisclosure(false);
   const theme = useMantineTheme();
 
-  const { isAuthenticated } = useContext(AuthContext);
+  const { isAuthenticated, logout } = useContext(AuthContext);
 
   return (
     <Box pb={60}>
@@ -69,9 +53,7 @@ export default function Header() {
               <Button variant="default" component={Link} to={'/create-news'}>
                 Create New
               </Button>
-              <Button component={Link} to={'/logout'}>
-                Logout
-              </Button>
+              <Button onClick={logout}>Logout</Button>
             </Group>
           ) : (
             <Group visibleFrom="sm">
@@ -123,9 +105,7 @@ export default function Header() {
               <Button variant="default" component={Link} to={'/create-news'}>
                 Create New
               </Button>
-              <Button component={Link} to={'/logout'}>
-                Logout
-              </Button>
+              <Button onClick={logout}>Logout</Button>
             </Group>
           ) : (
             <Group justify="center" grow pb="xl" px="md">

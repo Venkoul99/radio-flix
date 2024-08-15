@@ -6,7 +6,8 @@ import { AuthContext } from './contexts/AuthContext';
 import { useState } from 'react';
 import './App.css';
 
-interface AuthStateData extends Pick<AuthState, 'email' | 'accessToken' | 'isAuthenticated'> {}
+interface AuthStateData
+  extends Pick<AuthState, '_id' | 'email' | 'accessToken' | 'isAuthenticated'> {}
 
 export default function App() {
   const savedState = localStorage.getItem('__state');
@@ -21,10 +22,16 @@ export default function App() {
     localStorage.setItem('__state', JSON.stringify(mergedState));
   };
 
+  const logout = () => {
+    localStorage.removeItem('__state');
+    setAuthState({ _id: '', email: '', accessToken: '', isAuthenticated: false });
+  };
+
   const contextData: AuthState = {
     ...authState,
     isAuthenticated: !!authState.email,
     changeAuthState,
+    logout,
   };
 
   return (

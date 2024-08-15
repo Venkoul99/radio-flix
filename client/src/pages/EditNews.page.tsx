@@ -3,11 +3,5 @@ import { Footer } from '@/components/Footer/Footer';
 import EditNews from '@/components/EditNews/EditNews';
 
 export function EditNewsPage() {
-  return (
-    <>
-      <Header />
-      <EditNews />
-      <Footer />
-    </>
-  );
+  return <EditNews />;
 }

@@ -12,6 +12,8 @@ import { AuthContext } from './contexts/AuthContext';
 import { EditNewsPage } from './pages/EditNews.page';
 // import UserDetails from './components/UserDetails/UserDetails';
 import { MyNewsPage } from './pages/MyNews.page';
+import Header from './components/Header/Header';
+import { Footer } from './components/Footer/Footer';
 
 export function AuthHandler(props: { children?: React.ReactNode }) {
   const authState = useContext(AuthContext);
@@ -33,58 +35,73 @@ export function LoggedHandler(props: { children?: React.ReactNode }) {
   }
 }
 
+export function Layout() {
+  return (
+    <>
+      <Header />
+      <Outlet />
+      <Footer />
+    </>
+  );
+}
+
 const router = createBrowserRouter([
   {
-    path: '/',
-    element: <HomePage />,
-  },
-  {
-    element: <LoggedHandler />,
+    element: <Layout />,
     children: [
       {
-        path: '/login',
-        element: <LoginPage />,
+        path: '/',
+        element: <HomePage />,
       },
       {
-        path: '/register',
-        element: <RegisterPage />,
-      },
-    ],
-  },
-  {
-    path: '/contacts',
-    element: <ContactsPage />,
-  },
-  {
-    path: '/about-us',
-    element: <AboutUsPage />,
-  },
-  {
-    path: '/news',
-    element: <NewsPage />,
-  },
-  {
-    path: 'news/:newsId/details',
-    element: <NewsItemDetailsPage />,
-  },
-  {
-    element: <AuthHandler />,
-    children: [
-      {
-        path: '/create-news',
-        element: <CreateNewsPage />,
+        element: <LoggedHandler />,
+        children: [
+          {
+            path: '/login',
+            element: <LoginPage />,
+          },
+          {
+            path: '/register',
+            element: <RegisterPage />,
+          },
+        ],
       },
       {
-        path: '/news/:newsId/edit',
-        element: <EditNewsPage />,
+        path: '/contacts',
+        element: <ContactsPage />,
       },
-      // {
-      //   path: '/user/:userId/details',
-      //   element: <UserDetails />,
-      // },
       {
-        path: '/news/:userId/mynews',
-        element: <MyNewsPage />,
+        path: '/about-us',
+        element: <AboutUsPage />,
+      },
+      {
+        path: '/news',
+        element: <NewsPage />,
+      },
+      {
+        path: 'news/:newsId/details',
+        element: <NewsItemDetailsPage />,
+      },
+      {
+        element: <AuthHandler />,
+        children: [
+          {
+            path: '/create-news',
+            element: <CreateNewsPage />,
+          },
+          {
+            path: '/news/:newsId/edit',
+            element: <EditNewsPage />,
+          },
+          // {
+          //   path: '/user/:userId/details',
+          //   element: <UserDetails />,
+          // },
+          {
+            path: '/news/:userId/mynews',
+            element: <MyNewsPage />,
+          },
+        ],
       },
     ],
   },

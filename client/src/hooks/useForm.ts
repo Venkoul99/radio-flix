@@ -1,4 +1,4 @@
-import { useState, ChangeEvent, FormEvent } from 'react';
+import { useState, ChangeEvent, FormEvent, useEffect } from 'react';
 
 type FormValues = Record<string, any>;
 
@@ -13,26 +13,33 @@ interface UseFormReturn<T> {
   values: T;
   changeHandler: (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
   submitHandler: (e: FormEvent<HTMLFormElement>) => void;
+  setValues: React.Dispatch<React.SetStateAction<T>>;
 }
 
 export function useForm<T extends FormValues>({ initialValues, submitCallback }: UseFormProps<T>): UseFormReturn<T> {
   const [values, setValues] = useState<T>(initialValues);
 
   const changeHandler = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
     setValues((state) => ({
       ...state,
-      [e.target.name]: e.target.value,
+      [name]: value,
     }));
   };
 
-  const submitHandler = (e: FormEvent<HTMLFormElement>) => {
+  const submitHandler = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    submitCallback(values);
+    
+    await submitCallback(values);
+
+    setValues(initialValues)
   };
 
   return {
     values,
     changeHandler,
     submitHandler,
+    setValues
   };
 }
+

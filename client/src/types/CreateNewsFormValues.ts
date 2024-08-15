@@ -5,4 +5,6 @@ interface CreateNewsFormValues {
   highlighted: boolean;
   publishedOn: string;
   writtenBy: string;
+  _ownerId?: string;
+  comments?: any[];
 }

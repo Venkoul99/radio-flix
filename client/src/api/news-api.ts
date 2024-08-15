@@ -1,6 +1,7 @@
 import { NewsItem } from '@/types/NewsItem';
 import * as request from './requester';
 import { CreateNews } from '@/types/CreateNews';
+import { EditNews } from '@/types/EditNews';
 
 const BASE_URL = 'http://localhost:3030/jsonstore/news';
 
@@ -24,11 +25,17 @@ export const getOne = (newsId: string): Promise<NewsItem> => request.get<NewsIte
 
 export const create = (newsData: Omit<CreateNews, '_id'>): Promise<CreateNews> => request.post<NewsItem>(`${BASE_URL}`, newsData);
 
+export const remove = (newsId: string): Promise<NewsItem> => request.del<NewsItem>(`${BASE_URL}/${newsId}`);
+
+export const update = (newsId: string, newsData: Omit<CreateNews, '_id'>): Promise<EditNews> => request.put<EditNews>(`${BASE_URL}/${newsId}`, newsData);
+
 const newsApi = {
   getOne,
   getLastThree,
   getAll,
   create,
+  update,
+  remove
 };
 
 export default newsApi;

@@ -96,8 +96,8 @@ SoftUni React project
 
 ## 11. Some Fixes on news:
 - [x] Show Edit and Delete buttons only if creator
-- [ ] Create pop-up and function to show it for Edit
-- [ ] Create function for deletion of the news
+- [x] Create pop-up and function to show it for Edit
+- [x] Create function for deletion of the news
 - [ ] Take First and Last name of user when registering
 - [ ] Show First and Last name of the user in the news
 

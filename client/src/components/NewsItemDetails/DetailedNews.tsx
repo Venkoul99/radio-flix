@@ -2,11 +2,13 @@ import { useGetOneNews } from '@/hooks/useNews';
 import { Card, Image, Text, Badge, Group, Divider, Avatar, Button } from '@mantine/core';
 import { IconCalendar } from '@tabler/icons-react';
 import dayjs from 'dayjs';
-import { useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 import { AuthContext } from '@/contexts/AuthContext';
 import { useContext } from 'react';
+import newsApi from '@/api/news-api';
 
 export default function DetailedNews() {
+  const navigate = useNavigate();
   const { newsId } = useParams<{ newsId: string }>();
   const [news] = useGetOneNews(newsId || '');
   const { _id } = useContext(AuthContext);
@@ -14,6 +16,18 @@ export default function DetailedNews() {
   if (!news) {
     return <div>Loading...</div>;
   }
+
+  const newsDeleteHandler = async () => {
+    try {
+      if (window.confirm('Are you sure you want to delete this news item?')) {
+        await newsApi.remove(news._id);
+        navigate('/');
+      }
+    } catch (err) {
+      const error = err as Error;
+      console.log(error.message);
+    }
+  };
 
   return (
     <Card
@@ -72,8 +86,12 @@ export default function DetailedNews() {
             gap: '10px',
           }}
         >
-          <Button color="blue">Edit</Button>
-          <Button color="red">Delete</Button>
+          <Button component={Link} to={`/news/${newsId}/edit`}>
+            Edit
+          </Button>
+          <Button color="red" onClick={newsDeleteHandler}>
+            Delete
+          </Button>
         </Group>
       )}
     </Card>

@@ -114,3 +114,5 @@ Looks like account details cannot be edited, the information can be taken only f
 1. Latest Games
 2. URL `http://localhost:3030/data/games?sortBy=_createdOn%20desc&pageSize=3`
  3. USE URLSearchParams
+
+Test if the pipeline will be executed.
